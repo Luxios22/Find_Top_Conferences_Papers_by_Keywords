@@ -22,7 +22,7 @@ See [config.py](config.py). You can add your sources to the search range.
 
 By now the default setting is a set of top conferences on CV (Computer Vision) field in the past 5 years, and those conferences are CVPR, CVPR Workshop, ICCV, AAAI, IJCAI, ACMMM (ACM Multimedia), BMVC, NeurIPS, ECCV.
 
-## Run:
+## Run
 
 ### scrape.py:
 ``` bash

@@ -9,8 +9,8 @@ It will generate the paper lists as csv files, the content format is shown as fo
 
 ### {university}_{keyword}_papers.csv:
 |**university**|**year**|**conference**|**info**|**bibtex**|**electronic_edition**|
-|-------|-------|-----------|----------------------|-----------|:-------------------------------------------------------------------------------------------------------------|
-|SUTD|2018|CVPR|"Weijian Deng and Liang Zheng and Qixiang Ye and Guoliang Kang and Yi Yang and Jianbin JiaoImage-Image Domain Adaptation With Preserved Self-Similarity and Domain-Dissimilarity for Person Re-Identification2018 {IEEE} Conference on Computer Vision and Pattern Recognition, {CVPR} 2018, Salt Lake City, UT, USA, June 18-22, 2018"|https://dblp.org/rec/conf/cvpr/Deng0YK0J18.bib|https://dblp.org/rec/conf/cvpr/ChenWLJS21.bib|http://openaccess.thecvf.com/content_cvpr_2018/html/Deng_Image-Image_Domain_Adaptation_CVPR_2018_paper.html|
+|-------|-------|-----------|----------------------|-----------|:--------------------------------------------|
+|SUTD|2018|CVPR|"Weijian Deng and Liang Zheng and Qixiang Ye and Guoliang Kang and Yi Yang and Jianbin JiaoImage-Image Domain Adaptation With Preserved Self-Similarity and Domain-Dissimilarity for Person Re-Identification2018 {IEEE} Conference on Computer Vision and Pattern Recognition, {CVPR} 2018, Salt Lake City, UT, USA, June 18-22, 2018"| https://dblp.org/rec/conf/cvpr/Deng0YK0J18.bib| http://openaccess.thecvf.com/content_cvpr_2018/html/Deng_Image-Image_Domain_Adaptation_CVPR_2018_paper.html |
 
 ## Requirements
 Install all dependences libraries

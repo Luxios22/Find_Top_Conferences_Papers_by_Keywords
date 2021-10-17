@@ -24,6 +24,12 @@ By now the default setting is a set of top conferences on CV (Computer Vision) f
 
 ## Run
 
+### First create two subfolders (pdfs, results) in the repo folder.
+``` bash
+mkdir pdfs
+mkdir results
+```
+
 ### scrape.py:
 ``` bash
 ### Find papers by keyword without figuring out whether authors' institutions are in our range. 

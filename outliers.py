@@ -10,7 +10,7 @@ from utils import get_parser, csv_length, search_pdf_link, find_sg_university
 
 def main():
     args = get_parser().parse_args()
-    while(csv_length("results/outliers.csv")>0):
+    while(csv_length("results/outliers.csv")>1):
         with open(f'results/sg_{args.keyword}_papers.csv', 'a+', encoding='UTF8', newline='') as f1, open('results/outliers.csv', 'r', encoding='UTF8', newline='') as f2, open('results/outliers_bak.csv', 'w', encoding='UTF8', newline='') as f3:
             reader = csv.reader(f2)
             header = next(reader)

@@ -58,7 +58,7 @@ def parse_url(url, title):
         try:
             thepage = requests.get("https://sci-hub.ee/" + url)
             soup = BeautifulSoup(thepage.text, "html.parser")
-            if soup.find('id=pdf'):
+            if soup.find(id='pdf'):
                 pdf_link = soup.find(id='pdf').get("src")
             elif soup.find(type="application/x-google-chrome-pdf"):
                 pdf_link = soup.find(type="application/x-google-chrome-pdf").get("src")

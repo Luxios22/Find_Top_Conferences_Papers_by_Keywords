@@ -5,6 +5,7 @@ If you've not tried to find papers of Singapore universities, please do not use 
 """
 import csv
 import time
+from config import search_list, sg_universities
 from utils import get_parser, csv_length, search_pdf_link, find_sg_university
 
 def main():
@@ -21,7 +22,7 @@ def main():
                 try:
                     arxiv_pdf_link = search_pdf_link(title, conf, ee_link)
                     if arxiv_pdf_link: 
-                        uni = find_sg_university(arxiv_pdf_link)
+                        uni = find_sg_university(arxiv_pdf_link, search_list, sg_universities)
                         if uni:
                             info = author + title + booktitle 
                             writer1.writerow([uni, year, conf] + [info] + [biburl, ee_link])

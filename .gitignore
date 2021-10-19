@@ -63,6 +63,7 @@ target/
 ._.DS_Store
 nohup.out
 nohup2.out
+.google-cookie
 
 .vscode/*
 logs/

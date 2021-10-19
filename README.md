@@ -20,7 +20,7 @@ pip3 install -r requirements.txt
 ## Search Range
 See [config.py](config.py). You can add your sources to the search range. 
 
-By now the default setting is a set of top conferences on CV (Computer Vision) field in the past 5 years, and those conferences are CVPR, CVPR Workshop, ICCV, AAAI, IJCAI, ACMMM (ACM Multimedia), BMVC, NeurIPS, ECCV.
+By now the default setting is a set of top conferences and journals on CV (Computer Vision) field in the past 5 years. And those conferences are CVPR, CVPR Workshop, ICCV, AAAI, IJCAI, ACMMM (ACM Multimedia), BMVC, NeurIPS, ECCV. Top journals are TPAMI, TIP, IJCV and PR.
 
 ## Run
 

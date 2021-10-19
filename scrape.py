@@ -16,11 +16,19 @@ def scrape(urls, names):
         soup = BeautifulSoup(r.text, 'html.parser')
         conference, year=re.findall(r'[a-zA-Z]+|[0-9]+',name)
         res[conference][year] = []
-        for paper_item in soup.findAll(class_='entry inproceedings'):
+        if soup.findAll(class_="entry article"):
+            paper_list = soup.findAll(class_="entry article")
+            info = ['booktitle']
+        elif soup.findAll(class_='entry inproceedings'):
+            paper_list = soup.findAll(class_='entry inproceedings')
+            info = ['journal', 'volume']
+        for paper_item in paper_list:
             try: 
                 biburl=paper_item.find('a', href=re.compile("bibtex")).get('href').replace("html?view=bibtex", "bib?param=1")
                 bib_data = bibtexparser.loads(re.sub(r'\s{2,}', ' ', requests.get(biburl).text.replace('\n','')))
-                paper = [re.sub(r'\\+', '', bib_data.entries[0][x]) if x in bib_data.entries[0].keys() else '' for x in ['author', 'title', 'booktitle', 'biburl', 'url']]
+                paper = [re.sub(r'\\+', '', bib_data.entries[0][x]) if x in bib_data.entries[0].keys() else '' for x in ['author', 'title'] + info + ['biburl', 'url']]
+                if len(paper)>5:
+                    paper = paper[:2] + [paper[2] + ' ' + paper[3]] + paper[-2:]
                 res[conference][year].append(paper)
             except Exception as e:
                 print("Exception:", e)
